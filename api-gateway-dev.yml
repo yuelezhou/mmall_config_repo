@@ -1,0 +1,18 @@
+spring:
+  #A bean with that name has already been defined and overwriten is disabled
+  main:
+    allow-bean-definition-overriding: true
+    #redis
+  redis:
+    host: localhost
+    port: 6379
+    timeout: 10000
+    jedis:
+      pool:
+        min-idle: 2
+        max-idle: 8
+        max-active: 10
+        
+#全局敏感头，允许使用cookie
+zuul:
+  sensitive-headers:
